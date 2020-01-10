@@ -2,10 +2,88 @@
 
 @import 'vars';
 
-
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 12vw 88vw;
+    nav{
+        background: $secondary;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a{
+            text-align: center;
+            font-family: $sans-serif;
+            text-decoration: none;  
+            color: $white;
+            padding: 1rem 2rem;
+            &:hover{
+                background: darken($secondary, 10);
+                transition: .3s ease-in all;
+            }
+        }
+       
+
+    }
+    main{
+        header{
+            font-family: $sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 1px solid $grey;
+            margin: 0 4rem;
+            h1{
+                margin: 2rem 0;
+                color: $heading;
+            
+            }
+            
+        }
+
+        figure{
+                max-width: 14rem;
+                text-align: center;
+                img{
+                    width: 100%;
+                    height: auto;
+                    // margin-bottom: 1rem;
+                }
+                figcaption{
+                    margin: 1rem 0;
+                    font-size: 1.4rem;
+                    color: $grey;
+
+                }
+                .author{
+                    font-size: .8rem;
+                }
+        }
+
+        .fiction, .nonFiction, .graphicNovel{
+            margin: 6rem 0;
+            h2{
+                font-family: $sans-serif;
+                color: $heading;
+                font-weight: 700;
+                font-size: 2rem;
+                margin: 2rem 4rem;
+            }
+            .bookdisplay{
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    footer{
+        background: red;
+    }
 }
