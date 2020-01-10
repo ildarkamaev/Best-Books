@@ -5,6 +5,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   display: -ms-grid;
   display: grid;
@@ -52,27 +55,40 @@ body {
     text-align: center; }
     body main figure img {
       width: 100%;
-      height: auto; }
+      height: 10rem; }
     body main figure figcaption {
       margin: 1rem 0;
       font-size: 1.4rem;
       color: #5f6c7b; }
     body main figure .author {
       font-size: .8rem; }
-  body main .fiction, body main .nonFiction, body main .graphicNovel {
-    margin: 6rem 0; }
-    body main .fiction h2, body main .nonFiction h2, body main .graphicNovel h2 {
-      font-family: "Lato";
-      color: #094067;
-      font-weight: 700;
-      font-size: 2rem;
-      margin: 2rem 4rem; }
-    body main .fiction .bookdisplay, body main .nonFiction .bookdisplay, body main .graphicNovel .bookdisplay {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-      justify-content: space-evenly; }
+  body main section {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  body main .fiction h2, body main .nonFiction h2, body main .graphicNovel h2 {
+    font-family: "Lato";
+    color: #094067;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 2rem 4rem; }
+  body main .fiction .bookdisplay, body main .nonFiction .bookdisplay, body main .graphicNovel .bookdisplay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly; }
   body footer {
-    background: red; }
+    margin: 2rem;
+    font-family: "Lato";
+    color: #5f6c7b;
+    font-size: .8rem; }
