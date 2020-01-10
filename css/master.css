@@ -55,7 +55,7 @@ body {
     text-align: center; }
     body main figure img {
       width: 100%;
-      height: 10rem; }
+      height: auto; }
     body main figure figcaption {
       margin: 1rem 0;
       font-size: 1.4rem;

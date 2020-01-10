@@ -8,6 +8,13 @@ html(lang="en")
         script(src="https://kit.fontawesome.com/b639b9baf8.js")
         title Best Books of my choice
     body
+        mixin book(src, alt, title, author)
+            figure
+                img(src=src, alt=alt)
+                figcaption.title= title
+                figcaption.author= author
+
+
         nav
             a(href="#fiction") Fiction
             a(href="#nonfiction") Non-Fiction
@@ -18,48 +25,24 @@ html(lang="en")
             section.fiction#fiction
                 h2 Fiction
                 .bookdisplay
-                    figure
-                        img(src="img/dune.jpg", alt="Dune book cover")
-                        figcaption.title Dune
-                        figcaption.author Frank Herbert
-                    figure
-                        img(src="img/dorian_gray.jpg", alt="Dorian gray book cover")
-                        figcaption.title The Portrait of Dorian Gray
-                        figcaption.author Oscar Wilde
-                    figure
-                        img(src="img/lotr.jpg", alt="Lord of the Rings book cover")
-                        figcaption.title Lord of the Rings: Fellowship of the Ring
-                        figcaption.author J.R.R.Tolkien
+                    +book('img/dune.jpg', 'Dune book cover','Dune', 'Frank Herbert')
+                    +book('img/dorian_gray.jpg', 'Dorian Gray book cover','Dune', 'Oscar Wilde')
+                    +book('img/lotr.jpg', 'Lotr book cover','Lord of the Rings: Fellowship of the Ring', 'J.R.R.Tolkien')
+
             section.nonFiction#nonfiction
                 h2 Non-Fiction
                 .bookdisplay
-                    figure
-                        img(src="img/cosmos.jpeg", alt="Cosmos book cover")
-                        figcaption.title Cosmos
-                        figcaption.author Carl Sagan
-                    figure
-                        img(src="img/history_of_time.jpg", alt="")
-                        figcaption.title A Brief History of Time
-                        figcaption.author Stephen Hawking
-                    figure
-                        img(src="img/thinking fast and slow.jpg", alt="")
-                        figcaption.title Thinking, Fast and Slow
-                        figcaption.author Daniel Kahneman
+                    +book('img/cosmos.jpeg', 'Cosmos book cover','Cosmos', 'J.R.R.Tolkien')
+                    +book('img/history_of_time.jpg', 'A Brief History of Time book cover','A Brief History of Time', 'Stephen Hawking')
+                    +book('img/thinking fast and slow.jpg', 'Thinking, Fast and Slow book cover','Thinking Fast and Slow', 'Daniel Kahneman')
+                    
             section.graphicNovel#graphicNovel
                 h2 Graphic Novels
                 .bookdisplay
-                    figure
-                        img(src="img/blankets.jpg", alt="")
-                        figcaption.title Blankets
-                        figcaption.author Craig Thompson
-                    figure
-                        img(src="img/habibi.jpg", alt="")
-                        figcaption.title Habibi
-                        figcaption.author Craig Thompson
-                    figure
-                        img(src="img/they_called_us_enemy.jpg", alt="")
-                        figcaption.title They called us enemy
-                        figcaption.author George Takei
+                    +book('img/blankets.jpg', 'blankets book cover','Blankets', 'Craig Thompson')
+                    +book('img/habibi.jpg', 'Habibi book cover','Habibi', 'Craig Thompson')
+                    +book('img/they_called_us_enemy.jpg', 'enemy book cover','They called us enemy', 'George Takei')
+                    
             footer
                 p Made by Mae5tr0 for #100daysOfCode
         script(src="app.js")
